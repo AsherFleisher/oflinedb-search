@@ -11,7 +11,7 @@ function openAllPages()
         }
         
 }
-openAllPages()
+//openAllPages()
 
 // function onceOnPage()
 // {
