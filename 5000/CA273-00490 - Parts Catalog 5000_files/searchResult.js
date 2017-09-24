@@ -6,7 +6,9 @@
         var link1 = linksForLocal[i]
         var a = document.createElement("a")
         a.setAttribute("href",link1)
-        a.innerHTML = link1 + " <br/>"
+        link1 = link1.split("page")
+        link1 = link1[1].split("/")
+        a.innerHTML = link1[1].toUpperCase() + " <br/>"
         document.getElementById("results").appendChild(a);
       }
       

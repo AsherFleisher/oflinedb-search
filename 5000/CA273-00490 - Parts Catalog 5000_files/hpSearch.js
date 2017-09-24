@@ -3,17 +3,20 @@ function search(catalogNum)
     var linksForLocal = []
     var catalogName = catalogNum
     var links = JSON.parse(localStorage[catalogName]) //catalogName must be identical to catalogName from function getLinks(this)
-    var all = JSON.parse( localStorage["HPpage"])
+    var allPages = JSON.parse( localStorage["HPpage"])
     var word = document.getElementById("search").value
-    for (i=0;i < all.length; i++)
+    word = word.toUpperCase() 
+    for (i=0;i < allPages.length; i++)
         {
-            var link1 = all[i]["link"]
+            var link1 = allPages[i]["link"]
             link1 =  "../../page/" + link1
-            allSplit =JSON.stringify(all[i])
-            allSplit = allSplit.split(" ")
-            for(j=0;j<allSplit.length;j++)
+            allPagesSplit =JSON.stringify(allPages[i])
+            allPagesSplit = allPagesSplit.split(" ")
+            for(j=0;j<allPagesSplit.length;j++)
                 {
-                        if(allSplit[j].search(word)!=-1)
+                    var page = allPagesSplit[j]
+                    page.toUpperCase() 
+                        if(page.search(word)!=-1)
                         {
                             for(k=0;k<links.length;k++)
                                 {
