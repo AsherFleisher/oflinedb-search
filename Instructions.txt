@@ -1,0 +1,12 @@
+ on each home page
+1) add <input id="search"></input>
+2) add at the buttom of the page <script src="hpSearch.js"></script>
+3) add to the search button onclick="search('catalog # (5000)')  or add a class name with the catalog # 
+
+
+on each page in the 'page' file
+1) add at the buttom of the HTML page <script src="saveToDBPageFileInfo.js"></script>
+
+on each of the html catalog pages 
+1) add at the buttom of the HTML page <script src="saveToDBCatalogLinks.js"></script>
+2) add to Body: onload="getLinks('5000')" or add a class name with the catalog # 
